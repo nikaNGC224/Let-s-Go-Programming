@@ -6,8 +6,8 @@ import (
 )
 
 func main() {
-	var firstNumber int
-	var secondNumber int
+	var firstNumber float64
+	var secondNumber float64
 	var operation string
 
 	fmt.Print("Введите первое число: ")
@@ -46,14 +46,14 @@ func main() {
 	var result float64
 	switch operation {
 	case "+":
-		result = float64(firstNumber + secondNumber)
+		result = firstNumber + secondNumber
 	case "-":
-		result = float64(firstNumber - secondNumber)
+		result = firstNumber - secondNumber
 	case "*":
-		result = float64(firstNumber * secondNumber)
+		result = firstNumber * secondNumber
 	case "/":
-		result = float64(firstNumber / secondNumber)
+		result = firstNumber / secondNumber
 	}
 
-	fmt.Println("Результат:", result)
+	fmt.Printf("Результат: %.2f\n", result)
 }
