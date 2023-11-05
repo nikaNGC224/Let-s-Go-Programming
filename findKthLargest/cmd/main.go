@@ -6,7 +6,7 @@ import (
 	"sort"
 )
 
-// func partialSort: отсортирует k чисел в начало массива
+// func partialSort: сортирует k чисел и перемещает в начало массива
 func partialSort(a []int, k int, less func(e1, e2 int) bool) {
 	n := len(a)
 	for i := n; i > k; i-- {
