@@ -1,6 +1,7 @@
 package main
 
 import (
+	"errors"
 	"fmt"
 	"os"
 	"sort"
@@ -19,12 +20,14 @@ func partialSort(a []int, k int, less func(e1, e2 int) bool) {
 }
 
 func findKthLargest(nums []int, k int) int {
-	if nums == nil {
-		fmt.Println("Массив пуст")
+	if nums == nil || len(nums) == 0 {
+		err := errors.New("массив пуст")
+		fmt.Println(err.Error())
 		os.Exit(1)
 	}
 	if k > len(nums) || k < 1 {
-		fmt.Println("k имеет некорректную величину")
+		err := errors.New("k имеет некорректную величину")
+		fmt.Println(err.Error())
 		os.Exit(2)
 	}
 
